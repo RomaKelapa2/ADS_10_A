@@ -199,7 +199,7 @@ Data_katalog_alat_tempat			Berisi data yang mengelola data katalog untuk data al
 	SRS-NF-PR-027 	Response time 						Perangkat Lunak mampu mengirimkan notifikasi e-mail kepada pengguna maksimal dalam waktu 30 detik 
 	SRS-NF-PR-028 	Response time 						Perangkat Lunak mampu melakukan update data dalam waktu 5 detik 
 			Safety 	N/A 
-	SRS-NF-PR-029 	Security 						Perangkat lunak menggunakan standar enkripsi HTTPS 
+ 
 	ID 		Parameter 						Kebutuhan 
 	SRS-NF-IN-030 	Security 						Perangkat lunak menolak input pengguna yang akan mendaftarkan diri dengan password kurang dari 8 karakter 
 	SRS-NF-OUT-031 	Others 1 : Bahasa komunikasi 				Semua tanya jawab ataupun tulisan dalam antarmuka disediakan dalam bahasa 2 bahasa yakni bahasa Indonesia dan bahasa Inggris 
@@ -211,3 +211,68 @@ Data_katalog_alat_tempat			Berisi data yang mengelola data katalog untuk data al
 		• Tampilan mobile android dibuat dengan menggunakan pencil ,photoshop dan corel draw
 		• Implementasi model interface dan pemrograman android menggunakan tools androidstudio
 		• Bahasa pemrograman yang digunakan adalah Java 
+3.6 Kerunutan (traceability) 
+	Suatu perangkat lunak yang baik memiliki kebutuhan fungsional yang dapat dirunut model analisisnya. Berikut ini adalah tabel yang berisi traceability dari hasil analisis kebutuhan perangkat lunak yang dibangun.  
+ 
+3.6.1	Kebutuhan Fungsional vs Proses 
+		Mapping kebutuhan fungsional dengan proses pada DFD untuk perangkat lunak Sewa Aja adalah sebagai berikut. 
+ 
+	Tabel 8 Kebutuhan Fungsional vs proses 
+3.6.2	Data Store vs E-R 
+	Mapping data store pada DFD dengan Entity –Relasi untuk perangkat lunak Sewa Aja adalah sebagai berikut : 
+ 
+	Tabel 9 Data Store vs E-R 
+	Data Store 				Entity 					Relasi 
+	Data_admin				Pengolah Data			Data_admin, data_penyewa, data_penyedia_sewa, data_katalog_alat_tempat, 
+	Data_penyewa 				Penyewa				Data_penyewa, data_katalog_alat_tempat 
+	Data_penyedia_sewa			PenyediaAlat&Tempat		Data_penyedia, data_penyewa, data_pemesanan_pembayaran
+	Data_pemesanan_pembayaran 		Penyewa, Pemesanan,		Pemesannya, terdiri_dari, alatnya,tempatnya dalam_kategori
+						Baris pemesanan, 
+						Alat&Tempat, Kategori 	 
+	Data_pengembalian			Penyewa, Pengembalian, 		Pengembalian, data_penyewa, data_pemesanan, bukti_pesan_kembali
+						BuktiPesanKembali	
+	Data_katalog_alat_tempat		Alat_Tempat, Kategori 		Alat_tempatnya, dalam_kategori 
+
+3.7 Ringkasan Kebutuhan 
+	Perangkat lunak yang dibuat memiliki dua jenis kebutuhan, yaitu kebutuhan fungsional dan kebutuhan non fungsional.Kebutuhan ini mencerminkan semua hal yang harus dipenuhi, dan nantinya akan menjadi arahan untuk tahapan testing, karena pada dasarnya, semua kebutuhan harus dapat ditest. Berikut ini ringkasan semua kebutuhan perangkat lunak Sewa Aja. 
+ 
+3.7.1	Kebutuhan Fungsional 
+	Tabel 10 Kebutuhan Fungsional 
+	ID 		Deskripsi 
+	SRS-F-OUT-001 	Perangkat lunak dapat menampilkan form login 
+	SRS-F-OUT-002 	Perangkat lunak dapat menampilkan form entri registrasi 
+	SRS-F-IN-003 	Perangkat lunak dapat menerima masukan dari penyewa, berupa data penyewa, dan penyedia alat&tempat sewa
+	SRS-F-PR-004 	Perangkat lunak dapat menyimpan data penyewa 
+	SRS-F-OUT-005 	Perangkat lunak dapat menampilkan pesan berupa harga total yang harus dibayarkan 
+	SRS-F-PR-006 	Perangkat lunak dapat menyediakan mode pencarian terhadap alat&penyewa, sesuai dengan input dari penyewa 
+	SRS-F-IN-007 	Perangkat lunak dapat menerima masukan username dan password penyewa 
+	SRS-F-OUT-008 	Perangkat lunak dapat menampilkan katalog alat&penyewa
+	SRS-F-PR-009 	Perangkat lunak dapat menghitung jumlah uang yang harus dibayarkan oleh penyewa 
+	SRS-F-PR-010 	Perangkat lunak dapat menyimpan data pemesanan/pembayaran
+	SRS-F-PR-011 	Perangkat lunak dapat menyimpan data katalog alat&tempat
+	SRS-F-OUT-012 	Perangkat lunak dapat menampilkan form pembayaran 
+	SRS-F-IN-013 	Perangkat lunak dapat menerima masukan berupa alat yang dipesan penyewa beserta jumlahnya 
+	SRS-F-OUT-014 	Perangkat lunak dapat mengirimkan notifikasi pembayaran kepada penyewa 
+	SRS-F-OUT-015 	Perangkat lunak dapat mengirimkan notifikasi permintaan alat&tempat sewa kepada penyedia alat&tempat sewa
+	SRS-F-OUT-016 	Perangkat lunak dapat mengirimkan notifikasi pengiriman alat kepada jasa kurir 
+	SRS-F-IN-017 	Perangkat lunak dapat memperbaharui katalog alat&tempat
+	SRS-F-OUT-018 	Perangkat lunak dapat menampilkan form penyewaan alat&tempat
+	SRS-F-OUT-019 	Perangkat lunak dapat menampilkan form entri katalog alat&tempat sewa yang dientri oleh penyedia sewa
+	SRS-F-OUT-020 	Perangkat lunak dapat menampilkan informasi pemesanan dalam kurun waktu tertentu (harian, mingguan, dan/atau bulanan) dalam bentuk tabel 
+	SRS-F-OUT-021 	Perangkat lunak dapat menampilkan informasi pemesanan dalam kurun waktu tertentu (harian, mingguan, dan/atau bulanan) dalam bentuk grafik 
+	SRS-F-PR-022 	Perangkat lunak dapat meng-generate laporan pertanggungjawaban 
+ 
+ 
+3.7.2	Kebutuhan Non Fungsional 
+	Tabel 11 Kebutuhan Non Fungsional 
+	ID 		Deskripsi 
+	SRS-NF-OUT-023 	Perangkat Lunak harus terus dapat beroperasi 7 hari perminggu, 24 jam per hari tanpa gagal  
+	SRS-NF-PR-024 	Kegagalan dalam proses transaksi memiliki toleransi satu kali gagal dalam satu minggu 
+	SRS-NF-OUT-025 	Tampilan antarmuka mobile android Sewa Aja mudah dipahami user dan estetikanya bagus 
+	SRS-NF-PR-026 	Perangkat Lunak dapat diinstall dan dipakai di platform dekstop Windows dan Linux 
+	SRS-NF-PR-027 	Perangkat Lunak mampu mengirimkan notifikasi e-mail kepada pengguna maksimal dalam waktu 30 detik 
+	SRS-NF-PR-028 	Perangkat Lunak mampu melakukan update data dalam waktu 5 detik 
+	SRS-NF-IN-029 	Perangkat lunak menolak input pengguna yang akan mendaftarkan diri dengan password kurang dari 8 karakter 
+	SRS-NF-OUT-030 	Semua tanya jawab ataupun tulisan dalam antarmuka disediakan dalam 2 bahass yakni bahasa Indonesia dan bahasa Inggris 
+	SRS-NF-OUT-031 	Setiap layer harus mengandung logo Sewa Aja
+

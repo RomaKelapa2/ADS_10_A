@@ -1,0 +1,36 @@
+ANALISIS DAN DESAIN SISTEM
+Tugas System Request!
+
+Judul	Sistem Informasi Penyewaan Alat Kesenian
+Project Sponsor	        : Pemilik Start Up
+Bussiness Needs	        : •	Mengurangi kerumitan data penyewaan
+                          •	Mempermudah transaksi penyewaan
+Bussiness Requirements	: •	Fitur fasilitas penyewaan barang
+                          •	Informasi jadwal terupdate
+                          •	Informasi harga penyewaan alat
+                          •	Informasi pencarian alat
+                          •	Tabel penyewaan alat
+Bussiness Value	        : •	Memetakan penyewaan alat
+                          •	Menjembatani antara penyedia jasa sewa alat dengan peminat
+                          •	Pengembalian alat tepat waktu
+                          •	Pembayaran denda transparan
+Special Issues	        : •	Sistem ini dibangun berbasis web dan mobile
+                          •	Sistem ini harus dilaksanakan sebelum akhir semester genap 2017/2018
+
+Tugas Kebutuhan System!
+
+Kebutuhan Fungsionalitas	
+1.	Penyewa melakukan login dengan memasukkan username dan password. Sebelum itu, perlu registrasi data diri meliputi input email dan kontak penyewa. Penyewa dapat mencari alat sewa dengan memasukkan keyword di kolom pencarian.	
+2.	Startup project melakukan penambahan data penyewa dengan memasukkan data ke dalam list tabel penyewaan. Selain itu, dapat menghapus dan mengupdate data.	
+3.	Aplikasi menampilkan informasi data yang telah terupdate secara otomatis.	
+4.	Sistem aplikasi menginformasikan kepada penyewa jika password salah dan menampilkan prosedur pendaftaran member baru, prosedur penyewaan dan pembayaran.	
+5.	Menyediakan informasi alat sewa, tempat sewa dan harga sewa.	
+6.	Menginformasikan data jadwal baru setiap kali terjadi transaksi penyewaan.	
+7.	Menginformasikan data jadwal baru setiap kali terjadi transaksi penyewaan.	
+8.	Menginformasikan transaksi pembayaran online.	
+9.	Menginformasikan notifikasi batas waktu sewa dan denda.	
+10.	Menginformasikan fitur aplikasi feedback untuk komplain penyewa alat kepada sistem.
+
+Kebutuhan Nonfungsionalitas
+1.	Sistem aplikasi menggunakan 2 bahasa yakni bahasa Indonesia dan bahasa Inggris.
+2.	Sistem aplikasi diterapkan pada platform Android dan WEB

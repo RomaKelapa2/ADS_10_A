@@ -34,3 +34,38 @@ Kebutuhan Fungsionalitas
 Kebutuhan Nonfungsionalitas
 1.	Sistem aplikasi menggunakan 2 bahasa yakni bahasa Indonesia dan bahasa Inggris.
 2.	Sistem aplikasi diterapkan pada platform Android dan WEB
+
+Tugas Use Case 
+Use/ Actor I/ User/ Penyewa Alat:
+1.	Melakukan login sebagai user
+2.	Melakukan registrasi 
+3.	Melakukan pencarian alat dan tempat
+4.	Melihat daftar alat/katalog
+5.	Memesan alat
+6.	Melakukan pembayaran 
+Use/Actor II/ Penyewa Tempat/ Alat
+1.	Melakukan registrasi
+2.	Melakukan login sebagai penyedia tempat/alat
+3.	Melakukan daftar penyewa
+4.	Melakukan input katalog
+5.	Melakukan konfirmasi pengembalian
+6.	Melakukan konfirmasi pembayaran
+Use/Actor III/ Admin
+1.	Melakukan login sebagai admin
+2.	Melakukan input data user dan penyewa
+3.	Melakukan update data user dan penyewa
+Tugas Deskripsi Sistem
+1.	Use Case Name 	: Registrasi
+2.	Use Case Description	: Calon penyewa mendaftarkan diri sebagai member untuk melakukan penyewaan alat
+3.	Actor			:User/Penyewa
+4.	Trigger			: Calon penyewa membutuhkan alat untuk disewa; type:external
+5.	Preconditions		: -Calon penyewa melakukan otentifikasi dengan verifikasi   username dan password
+-Database melakukan up-to-date untuk data registrasi user
+6.  Normal Course		:-Penyewa mengisi daftar diri pada form pendaftaran
+				             -Penyewa melakukan verifikasi pendaftaran/registrasi
+7. Post Conditions		: -Penyewa telah memiliki akun yang telah terotentifikasi
+                        -Akun penyewa telah tersimpan di database
+                        -Database memberikan notifikasi data penyewa
+8. Exceptions		: -Sistem memberikan peringatan verifikasi email kembali ke akun penyewa dalam jangka waktu 24 jam
+                  -Sistem akan menghapus akun penyewa jika verifikasi belum dilakukan
+

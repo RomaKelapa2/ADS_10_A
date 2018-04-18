@@ -1,16 +1,12 @@
 1. Pendahuluan
 
 1.1	Tujuan Penulisan Dokumen
-Dokumen ini ditulis dalam rangka menjabarkan spesifikasi kebutuhan perangkat lunak yang mana akan digunakan oleh ADS_10_A. 
-Detail penjabaran spesifikasi perangkat lunak meliputi deskripsi umum perangkat lunak dan deskripsi kebutuhan perangkat lunak. 
-Perangkat lunak yang akan dibangun bernama Sewa Aja. Dalam rangka membangun perangkat lunak tersebut, tentunya spesifikasi kebutuhan untuk perangkat lunak tersebut dibutuhkan, 
-khususnya oleh para pengembang dan pembangun perangkat lunak tersebut.
+
+Dokumen ini ditulis dalam rangka menjabarkan spesifikasi kebutuhan perangkat lunak yang mana akan digunakan oleh ADS_10_A. Detail penjabaran spesifikasi perangkat lunak meliputi deskripsi umum perangkat lunak dan deskripsi kebutuhan perangkat lunak. Perangkat lunak yang akan dibangun bernama Sewa Aja. Dalam rangka membangun perangkat lunak tersebut, tentunya spesifikasi kebutuhan untuk perangkat lunak tersebut dibutuhkan, khususnya oleh para pengembang dan pembangun perangkat lunak tersebut.
 
 1.2	Lingkup Masalah
 
-Aplikasi Sewa Aja adalah sebuah aplikasi penyewaan alat kesenian berbasis web dan android  yang menjembatani antara pemilik  alat kesenian dengan penyewa . Sistem ini di bangun untuk memenuhi permintaan pemilik Start Up. Pengguna perangkat lunak dapat melakukan pendaftaran, sign in, melihat katalog, memilih produk, menyewa produk yang diinginkan, melihat jadwal pengembalian, dan melakukan pembayaran. 
-Sistem ini dikelola oleh seorang admin yang bertugas memperbaharui katalog, data user baru, dan data penyewaan. Sementara pemilik alat dapat memasukkan daftar katalog baru, melihat daftar penyewa dan melakukan konfirmasi jika penyewa melakukan penyewaan atau pengembalian. 
-Data-data yang dikelola admin dipertanggung jawabkan kepada Pemilik Startup di mana seorang manajer dari Pemilik Startup akan mengunjungi kantor Sewa Aja dan melakukan observasi serta meminta laporan pertanggung jawaban.
+Aplikasi Sewa Aja adalah sebuah aplikasi penyewaan alat kesenian berbasis web dan android  yang menjembatani antara pemilik  alat kesenian dengan penyewa . Sistem ini di bangun untuk memenuhi permintaan pemilik Start Up. Pengguna perangkat lunak dapat melakukan pendaftaran, sign in, melihat katalog, memilih produk, menyewa produk yang diinginkan, melihat jadwal pengembalian, dan melakukan pembayaran. Sistem ini dikelola oleh seorang admin yang bertugas memperbaharui katalog, data user baru, dan data penyewaan. Sementara pemilik alat dapat memasukkan daftar katalog baru, melihat daftar penyewa dan melakukan konfirmasi jika penyewa melakukan penyewaan atau pengembalian. Data-data yang dikelola admin dipertanggung jawabkan kepada Pemilik Startup di mana seorang manajer dari Pemilik Startup akan mengunjungi kantor Sewa Aja dan melakukan observasi serta meminta laporan pertanggung jawaban.
 
 
 1.3	Definisi, Istilah dan Singkatan

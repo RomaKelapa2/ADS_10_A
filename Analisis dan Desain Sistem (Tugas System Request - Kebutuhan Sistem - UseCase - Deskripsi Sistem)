@@ -54,6 +54,8 @@ Use/Actor III/ Admin
 1.	Melakukan login sebagai admin
 2.	Melakukan input data user dan penyewa
 3.	Melakukan update data user dan penyewa
+
+
 Tugas Deskripsi Sistem
 1.	Use Case Name 	: Registrasi
 2.	Use Case Description	: Calon penyewa mendaftarkan diri sebagai member untuk melakukan penyewaan alat

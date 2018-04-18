@@ -18,6 +18,29 @@ Interface	: Antarmuka antara perangkat lunak dan pengguna
 Data store	: Tempat penyimpanan data
 API		: Aplication Programming Interface
 
+1.4	Aturan Penomoran
+
+Dalam dokumen ini, terdapat beberapa aturan penomoran yang dipakai. Untuk daftar penamaan perangkat lunak dijelaskan pada tabel dibawah ini :
+ Aturan penomoran
+Nama-ID	                Aturan penamaan			      Deskripsi
+Kebutuhan fungsional	SRS-F-IN/PR/OUT-xxx		SRS adalah System Requirement Summary,
+			                                      F adalah Fungsional
+			                                      IN menunjukkan operasi Input
+			                                      PR menunjukkan operasi Proses
+			                                      OUT menunjukkan output
+			                                      xxx adalah nomor SRS-Id.
+ 
+Kebutuhan	            SRS-NF-IN/PR/OUT-xxx	SRS adalah System Requirement Summary
+non fungsional		                          NF adalah non-Fungsional
+		                                        IN menunjukkan operasi Input
+		                                        PR menunjukkan operasi Proses
+		                                        OUT menunjukkan operasi Output
+		                                        xxx adalah nomor SRS-Id.
+                                            
+Bubble	              DFD-X-Y.Z	            DFD adalah Data Flow Diagram
+		                                        X adalah nomor level diagram
+		                                        Y.Z adalah nomer pada buble diagram
+
 
 1.4	Referensi
 

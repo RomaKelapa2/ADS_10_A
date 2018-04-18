@@ -318,10 +318,10 @@ Data_katalog_alat_tempat			Berisi data yang mengelola data katalog untuk data al
 	SRS-NF-OUT-023 	Perangkat Lunak harus terus dapat beroperasi 7 hari perminggu, 24 jam per hari tanpa gagal  
 	SRS-NF-PR-024 	Kegagalan dalam proses transaksi memiliki toleransi satu kali gagal dalam satu minggu 
 	SRS-NF-OUT-025 	Tampilan antarmuka mobile android Sewa Aja mudah dipahami user dan estetikanya bagus 
-	SRS-NF-PR-026 	Perangkat Lunak dapat diinstall dan dipakai di platform dekstop Windows dan Linux 
-	SRS-NF-PR-027 	Perangkat Lunak mampu mengirimkan notifikasi e-mail kepada pengguna maksimal dalam waktu 30 detik 
+	SRS-NF-PR-026 	Perangkat Lunak dapat diinstall dan dipakai di platform Android 
+	SRS-NF-PR-027 	Perangkat Lunak mampu mengirimkan notifikasi di apliksi kepada pengguna maksimal dalam waktu 30 detik 
 	SRS-NF-PR-028 	Perangkat Lunak mampu melakukan update data dalam waktu 5 detik 
 	SRS-NF-IN-029 	Perangkat lunak menolak input pengguna yang akan mendaftarkan diri dengan password kurang dari 8 karakter 
-	SRS-NF-OUT-030 	Semua tanya jawab ataupun tulisan dalam antarmuka disediakan dalam 2 bahass yakni bahasa Indonesia dan bahasa Inggris 
+	SRS-NF-OUT-030 	Semua tanya jawab ataupun tulisan dalam antarmuka disediakan dalam 2 bahasa yakni bahasa Indonesia dan bahasa Inggris 
 	SRS-NF-OUT-031 	Setiap layer harus mengandung logo Sewa Aja
 

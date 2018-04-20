@@ -1,15 +1,12 @@
 1. Pendahuluan
 
 1.1	Tujuan Penulisan Dokumen
-
-Dokumen ini ditulis dalam rangka menjabarkan spesifikasi kebutuhan perangkat lunak yang mana akan digunakan oleh ADS_10_A. Detail penjabaran spesifikasi perangkat lunak meliputi deskripsi umum perangkat lunak dan deskripsi kebutuhan perangkat lunak. Perangkat lunak yang akan dibangun bernama Sewa Aja. Dalam rangka membangun perangkat lunak tersebut, tentunya spesifikasi kebutuhan untuk perangkat lunak tersebut dibutuhkan, khususnya oleh para pengembang dan pembangun perangkat lunak tersebut.
+	Dokumen ini ditulis dalam rangka menjabarkan spesifikasi kebutuhan perangkat lunak yang mana akan digunakan oleh ADS_10_A. Detail penjabaran spesifikasi perangkat lunak meliputi deskripsi umum perangkat lunak dan deskripsi kebutuhan perangkat lunak. Perangkat lunak yang akan dibangun bernama Sewa Aja. Dalam rangka membangun perangkat lunak tersebut, tentunya spesifikasi kebutuhan untuk perangkat lunak tersebut dibutuhkan, khususnya oleh para pengembang dan pembangun perangkat lunak tersebut.
 
 1.2	Lingkup Masalah
-
-Aplikasi Sewa Aja adalah sebuah aplikasi penyewaan alat kesenian berbasis android  yang menjembatani antara pemilik  alat kesenian dengan penyewa . Sistem ini di bangun untuk memenuhi permintaan pemilik Start Up. Pengguna perangkat lunak dapat melakukan pendaftaran, sign in, melihat katalog, memilih produk, menyewa produk yang diinginkan, melihat jadwal pengembalian, dan melakukan pembayaran. Sistem ini dikelola oleh seorang admin yang bertugas mengelola administrasi pendaftaran, mengelola data , dan mengontrol laporan. Sementara pemilik alat dapat mengupgrade daftar katalog, melihat daftar penyewa dan melakukan konfirmasi jika penyewa melakukan penyewaan atau pengembalian. Data-data yang dikelola admin dipertanggung jawabkan kepada Pemilik Startup di mana seorang manajer dari Pemilik Startup akan mengunjungi kantor Sewa Aja dan melakukan observasi serta meminta laporan pertanggung jawaban.
+	Aplikasi Sewa Aja adalah sebuah aplikasi penyewaan alat kesenian berbasis android  yang menjembatani antara pemilik  alat kesenian dengan penyewa . Sistem ini di bangun untuk memenuhi permintaan pemilik Start Up. Pengguna perangkat lunak dapat melakukan pendaftaran, sign in, melihat katalog, memilih produk, menyewa produk yang diinginkan, melihat jadwal pengembalian, dan melakukan pembayaran. Sistem ini dikelola oleh seorang admin yang bertugas mengelola administrasi pendaftaran, mengelola data , dan mengontrol laporan. Sementara pemilik alat dapat mengupgrade daftar katalog, melihat daftar penyewa dan melakukan konfirmasi jika penyewa melakukan penyewaan atau pengembalian. Data-data yang dikelola admin dipertanggung jawabkan kepada Pemilik Startup di mana seorang manajer dari Pemilik Startup akan mengunjungi kantor Sewa Aja dan melakukan observasi serta meminta laporan pertanggung jawaban.
 
 1.3	Definisi, Istilah dan Singkatan
-
 	Berikut definisi, istilah serta singkatan yang digunakan dalam dokumen ini :
 	DFD		: Data Flow Diagram. Diagram yang menggambarkan aliran data.
 	ERD		: Entity Relationship Diagram. Diagram yang menggambarkan entitas suatu objek beserta relasinya.
@@ -54,6 +51,7 @@ Aplikasi Sewa Aja adalah sebuah aplikasi penyewaan alat kesenian berbasis androi
 	Bagian deskripsi kebutuhan di dalam dokumen ini meliputi kebutuhan antarmuka eksternal, kebutuhan fungsional, kebutuhan non fungsional, kebutuhan data, batasan perancangan perangkat lunak, keruntunan, dan ringkasan dari kebutuhan perangkat lunak, baik itu kebutuhan fungsional maupun kebutuhan non fungsional. Kebutuhan antarmuka eksternal meliputi antarmuka pemakai, antarmuka perangkat keras, antarmuak perangkat lunak, dan antarmuka komunikasi. Kebutuhan fungsional dan kebutuhan non fungsional perangkat lunak diuraikan dengan lengkap di bagian ini dan ringkasan dari kebutuhan perangkat lunak yang dibuat disertakan dalam dokumen ini. Kebutuhan fungsional perangkat lunak digambarkan dalam spesifikasi proses. Kebutuhan data dari perangkat lunak digambarkan dalam Entity Relationship Diagram (E-R Diagram). Batasan perancangan dari perangkat lunak yang akan dibuat tentunya harus dijelaskan dalam dokumen ini agar pengembang perangkat lunak lebih mudah dalam melakukan pekerjaannya. 
 
 2. Deskripsi Umum Perangkat Lunak
+
 2.1 Deskripsi umum system
 	Sewa aja adalah aplikasi berbasis android yang berguna untuk mencari tempat peminjaman alat music yang berbasis android. Pengguna aplikasi ini yaitu pelanggan dan pemilik penyewaan. Pengguna aplikasi dapat mendaftarkan diri sebagai pelanggan dan pemilik alat sewa. pelanggan yang telah mendaftarkan diri pada aplikasi ini bisa melakukan sign in untuk melihat atau mencari daftar alat-alat yang disewakan maupun tempat penyewaan alat, selain itu pelanggan bisa melakukan pembayaran . Sedangkan pemilik tempat penyewaan alat jika sudah mendaftar ke aplikasi ini bisa melihat dan mengedit katalog alat-alat music yang disewakan dan juga bisa melihat daftar alat-alat music dan tempat penyewaan alat music yang sudah terdaftar di aplikasi ini, melakukan konfirmasi pembayaran, pengambilan alat dan pengembalian alat. Pengguna yang ingin melakukan penyewaan alat tinggal mencari di menu pencarian . setelah menemukan alat yang ingin disewa , pelanggan tinggal mengisi form penyewaan seperti alat sewa, tanggal pengambilan dan pengembalian. Setelah itu akan muncul harga yang harus dibayar. Pelanggan bisa melakukan pembayaran melalui atm atau bisa langsung di tempat penyewaan. Sedangkan pemilik penyewaan alatmusik jika sudah mendaftarkan diri bisa langsung melakukan update data tentang daftar alat yang disewakan dan harga yang diberikan untuk menyewa alat tersebut, pelanggan yang sudah melakukan pembayaran penyewaan alat bisa melihat statur penyewaannya jika pembayaran sudah masuk di rekening penyewa alat maka pemilih penyewaaan alat akan memberikan knfirmasi pembayaran yang sudah dilakukan oleh pelanggan , sehingga pelanggan bisa mengambil alat tersebut jika sudah masuk tempo tanggal pengambilan serta mengembalikan alat, sehingga pemilik penyewaan akan melakukan konfirmasi pengambilan dan pengembalian. Admin disini bertugas untuk mengelola pendaftaran user sebagai pelanggan atau pemilik alat sewa yang mendaftarkan ke aplikasi . Selain itu admin juga mengelola pembayaran yang sudah dilakukan oleh pelanggan supaya tidak terjadi penipuan , dan mengecek laporan yang ada pada aplikasi.
 2.2	Karakteristik Pengguna
@@ -98,6 +96,7 @@ Aplikasi Sewa Aja adalah sebuah aplikasi penyewaan alat kesenian berbasis androi
 		Koneksi internet
 
 3. Deskripsi Kebutuhan 
+
 3.1	Kebutuhan Antarmuka Eksternal 
 	Perangkat Lunak Sewa Aja membutuhkan fasilitas-fasilitas antar muka eksternal sebagai berikut : 
    3.1.1 Antarmuka pemakai 
@@ -108,6 +107,7 @@ Aplikasi Sewa Aja adalah sebuah aplikasi penyewaan alat kesenian berbasis androi
 		• Tampilan katalog alat&tempat
 		• Tampilan pemesanan/pembayaran
 		• Tampilan pengembalian
+		• Tampilan Laporan(Grafik dan Tabel)
    3.1.2 Alat-alat yang mendukung antarmuka pemakai adalah sebagai berikut:
 		• Keyboard 
 		• Mouse 
@@ -177,8 +177,8 @@ Aplikasi Sewa Aja adalah sebuah aplikasi penyewaan alat kesenian berbasis androi
 	OUT-015 	permintaan alat&tempat kepada penyedia 
 			alat&tempat sebenarnya
 
-	SRS-F-		Perangkat lunak dapat mengirimkan notifikasi  	Setelah uang pembayaran diterima, permintaan pengiriman alat sewa kepada penyewa akan dikirimkan kepada jasa kurir
-	OUT-016 	pengiriman alat sewa kepada jasa kurir
+	SRS-F-		Perangkat lunak dapat mengirimkan notifikasi  	Setelah uang pembayaran diterima, permintaan pengiriman alat sewa kepada penyewa akan dikirimkan kepada penyewa
+	OUT-016 	pengiriman alat sewa kepada penyewa
 
 	SRS-F-		Perangkat lunak dapat memperbaharui katalog 	Admin dapat melakukan pembaharuan data katalog alat&tempat melalui perangkat lunak yang dibuat
 	IN017 	 	alat&tempat
@@ -206,12 +206,12 @@ Aplikasi Sewa Aja adalah sebuah aplikasi penyewaan alat kesenian berbasis androi
 3.2.2	DFD Level 1 
 	3.2.2.1 DFD Level 2 <Proses registarasi>
 	3.2.2.2 DFD Level 2 <Proses lihat dan update katalog alat&tempat> 
-	3.2.2.3 DFD Level 2 <Proses Permintaan Sewa>
-	3.2.2.4 DFD Level 2 <Proses Pemesanan>
-	3.2.2.5 DFD Level 2 <Proses Pembayaran> 
+	3.2.2.3 DFD Level 2 <Proses Pemesanan>
+	3.2.2.4 DFD Level 2 <Proses Pembayaran> 
 	3.2.2.5 DFD Level 2 <Proses Pengembalian>
-	3.2.2.7 DFD Level 2 <Generate laporan> 
+	3.2.2.6 DFD Level 2 <Generate laporan> 
 3.2.3	Spesifikasi Proses (P-SPEC) 
+
 3.2.4 	Data Store 
 	Tabel 6 Data Store 
 	Data Store 					Deskripsi 
@@ -260,7 +260,7 @@ Aplikasi Sewa Aja adalah sebuah aplikasi penyewaan alat kesenian berbasis androi
 	Mapping data store pada DFD dengan Entity –Relasi untuk perangkat lunak Sewa Aja adalah sebagai berikut : 
  
 	Tabel 9 Data Store vs E-R 
-	Data Store 				Entity 					Relasi 
+	Data Store 				Entity 				Relasi 
 	Data_admin				Pengolah Data			Data_admin, data_penyewa, data_penyedia_sewa, data_katalog_alat_tempat, 
 	Data_penyewa 				Penyewa				Data_penyewa, data_katalog_alat_tempat 
 	Data_penyedia_sewa			PenyediaAlat&Tempat		Data_penyedia, data_penyewa, data_pemesanan_pembayaran
@@ -292,7 +292,7 @@ Aplikasi Sewa Aja adalah sebuah aplikasi penyewaan alat kesenian berbasis androi
 	SRS-F-IN-013 	Perangkat lunak dapat menerima masukan berupa alat yang dipesan penyewa beserta jumlahnya 
 	SRS-F-OUT-014 	Perangkat lunak dapat mengirimkan notifikasi pembayaran kepada penyewa 
 	SRS-F-OUT-015 	Perangkat lunak dapat mengirimkan notifikasi permintaan alat&tempat sewa kepada penyedia alat&tempat sewa
-	SRS-F-OUT-016 	Perangkat lunak dapat mengirimkan notifikasi pengiriman alat kepada jasa kurir 
+	SRS-F-OUT-016 	Perangkat lunak dapat mengirimkan notifikasi pengiriman alat kepada penyewa
 	SRS-F-IN-017 	Perangkat lunak dapat memperbaharui katalog alat&tempat
 	SRS-F-OUT-018 	Perangkat lunak dapat menampilkan form penyewaan alat&tempat
 	SRS-F-OUT-019 	Perangkat lunak dapat menampilkan form entri katalog alat&tempat sewa yang dientri oleh penyedia sewa

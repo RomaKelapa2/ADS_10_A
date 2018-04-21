@@ -108,19 +108,19 @@
 		• Tampilan pemesanan/pembayaran
 		• Tampilan pengembalian
 		• Tampilan Laporan(Grafik dan Tabel)
-   3.1.2 Alat-alat yang mendukung antarmuka pemakai adalah sebagai berikut:
+   	 Alat-alat yang mendukung antarmuka pemakai adalah sebagai berikut:
 		• Keyboard 
 		• Mouse 
 		• Monitor 
-   3.1.3 Antarmuka Perangkat Keras 
+   3.1.2 Antarmuka Perangkat Keras 
 	 Antarmuka perangkat keras yang digunakan untuk mengoperasikan perangkat lunak antara lain : 
 		• Smartphone
-   3.1.4 Antarmuka Perangkat Lunak 
+   3.1.3 Antarmuka Perangkat Lunak 
 	 Antarmuka perangkat lunak yang digunakan oleh perangkat lunak ini adalah sebagai berikut : 
 		• Android Studio versi 4.0-4.02 Ice Cream Sandwich (API Level 14)
 		• SQLite
 		• API E-Bangking
-   3.1.5 Antarmuka Komunikasi 
+   3.1.4 Antarmuka Komunikasi 
 	 Antarmuka komunikasi yang digunakan untuk mengoperasikan perangkat lunak antara lain : 
 		• Kuota Internet
 
@@ -210,6 +210,7 @@
 	3.2.2.4 DFD Level 2 <Proses Pembayaran> 
 	3.2.2.5 DFD Level 2 <Proses Pengembalian>
 	3.2.2.6 DFD Level 2 <Generate laporan> 
+	
 3.2.3	Spesifikasi Proses (P-SPEC) 
 
 3.2.4 	Data Store 
@@ -222,7 +223,33 @@
 	Data_katalog_alat_tempat			Berisi data yang mengelola data katalog untuk data alat dan tempat. Menyimpan gambar dari alat&tempat, kategori alat&tempat, nama alat&tempat dll 
 
 3.2.4	Spesifikasi Proses (P-SPEC) 
-
+	Tabel 5 Spesifikasi Proses 
+	Kode buble 	Deskripsi 
+	DFD-0-1 	Proses ini merupakan gambaran sistem secara keseluruhan. Melibatkan terminator serta data flow yang keluar-masuk kedalam sistem. Buble 0 akan dideskripsikan pada DFD level selanjutnya agar bisa memberikan gambaran secara lebih rinci dan spesifik. 
+	DFD-1-1 	Terminator yang dapat melakukan pilihan input adalah penyewa dan admin, karena kedua terminator ini merupakan pengguna aktif yang dapat berinteraksi dengan user. Proses mengeluarkan output sesuai dengan pilihan user, yang akan meneruskan data flow pada proses yang sesuai dengan pilihan user. 
+	DFD-1-2 	Proses ini akan terjadi ketika user memilih menu pilihan registrasi. User yang belum terdaftar dapat melakukan registrasi sehingga data hasil registrasi tersebut akan tersimpan pada data penyewa 
+	DFD-1-3 	Penyewa yang telah terdaftar dapat melihat katalog alat&tempat yang disediakan dari data katalog. Proses ini menerima input dari data penyewa agar mampu memvalidasi apakah user yang sedang aktif merupakan penyewa atau tidak. Selain itu admin dapat melakukan piihan untuk melakukan update katalog. Data yang telah di update akan disimpan pada data katalog. 
+	DFD-1-4 	Proses ini menerima data flow berupa Pil_sewa dan Pil_Pencarian. Proses ini memerlukan data store dan data katalog alat&tempat agar bisa melakukan proses pemesanan. Setelah keluar dari proses ini, akan didapatkan data pesanan(mulai dari nama_alat, nama_tempat, jumlah_alat, total_harga dll). Jika alat yang dipesan tidak ada maka sistem akan memberikan notifikasi. 
+	DFD-1-5 	Penyewa harus melalui tahap pembayaran agar alat yang  dipesan bisa dikirimkan. Proses ini menerima konfirmasi pembayaran dari bank, serta konfirmasi pengiriman dari penyewa melalui sistem. Selain itu, proses ini akan mengeluarkan data form pembayaran yang akan digunakan oleh bank, serta permintaan pengiriman kepada penyewa. 
+	DFD-1-6 	Proses ini untuk pengembalian alat yang dilakukan oleh penyewa kepada sistem kemudian akan memberikan status konfirmasi pengembalian jika alat yang disewa sudah dikembalikan ke tempat sewa.
+	DFD-1-7		Proses ini menerima input pilihan laporan yang dikirim oleh admin, kemudian melakukan proses generate laporan sehingga admin bisa mendapatkan laporan untuk dicetak sebagai rekap data laporan. 
+	DFD-2-2.1 	Proses ini dibuat agar bisa memenuhi spesifikasi user requirment yang dibuat. Apabila pengguna memilih menu registrasi, maka sistem akan meminta masukan kepada penyewa berupa data apa saja yang dibutuhkan. Oleh karena itu output dari proses ini berupa data form yang akan diisi oleh penyewa.
+	DFD-2-2.2 	Data form yang telah ditampilkan harus diisi oleh pengguna. Apabila telah tervalidasi, maka status pengguna akan naik menjadi penyewa. Disini data penyewa akan disimpan dalam data store penyewa.
+	DFD-2-2.3 	Apabila user telah terdaftar, maka user cukup melakukan login sebagai penyewa. Proses ini merupakan proses pengecekan terhadap seorang user. 
+	DFD-2-3.1 	Penyewa dapat melihat data katalog alat&tempat yang tersedia.
+	DFD-2-3.2 	Admin dapat melakukan update pada katalog alat&tempat. 
+	DFD-2-4.1 	Apabila penyewa memilih menu Pil_sewa, maka penyewa dapat memilih alat yang ingin dipesan. Keluaran dari proses ini berupa data pesanan (kd_alat, nama_alat, jenis_alat, jumlah_alat, total_harga dan tgl_pesan yang harus dibayarkan) 
+	DFD-2-4.2 	Proses pencarian alat&tempat dapat dipilih oleh penyewa. Software akan menampilkan data alat&tempat sesuai kriteria yang diinginkan penyewa. 
+	DFD-2-5.1 	Proses ini transfer uang dilakukan di dalam maupun luar sistem sesuai jarak atau lokasi penyewa. Transfer uang dalam proses ini diartikan sebagai input jumlah uang yang sesuai dengan data pemesanan.  
+	DFD-2-5.2 	Proses ini menerima input data proses 5.1. Pada bagian ini akan dilakukan pengisian form pembayaran oleh user yang datanya akan dipakai oleh pihak bank. Proses ini juga akan mengirimkan status kelunasan pembayaran. 
+	DFD-2-5.3 	Proses akan menerima konfirmasi_pembayaran dari Bank, apabila telah terbukti lunas, maka proses akan mengirimkan permintaan pengiriman alat pada kurir. Setelah melakukan pengiriman, kurir wajib melakukan akses ke sistem dan mengirimkan bahwa alat telah sampai pada penyewa. 
+	DFD-2-6.1	Proses ini akan menerima konfirmasi pengembalian oleh penyewa dengan bukti transaksi sewa alat.
+	DFD-2-7.1 	Apabila kondisi memungkinkan, admin mempunyai hak untuk melakukan pemesanan alat&tempat. Proses ini menerima input Data_alat&tempat kosong yang dihasilkan pada proses 6.1, kemudian memberikan output data_permintaan alat&tempat 
+			Untuk mengirimkan laporan dari admin untuk di data rekap, admin memiliki hak akses untuk mencetak laporan. Data ini diperoleh dari data store yang terkait dengan pemesanan. 
+			Admin dapat melakukan Pil_info Pemesanan untuk mendapatkan grafik dan data pemesanan alat&tempat yang berupa tabel.
+	DFD-2-7.2 	Proses ini untuk mencetak laporan pemesanan yang berisi segala transaksi dan konfirmasi pemesanan sewa alat oleh penyewa kepada penyedia sewa alat.
+	DFD-2-7.3 	Proses ini untuk mencetak laporan pembayaran yang berisi segala transaksi dan konfirmasi pembayaran sewa alat oleh penyewa kepada penyedia sewa alat.
+	DFD-2-7.4 	Proses ini untuk mencetak laporan pengembalian yang berisi segala transaksi dan konfirmasi pengembalian sewa alat oleh penyewa kepada penyedia sewa alat.
 3.3 Kebutuhan Data 
 	3.3.1 E-R diagram 
 3.4 Kebutuhan Non Fungsional 

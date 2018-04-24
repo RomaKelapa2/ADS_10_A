@@ -37,13 +37,13 @@
 								    	Y.Z adalah nomer pada buble diagram
 
 
-1.4	Referensi
+1.5	Referensi
 
 	Dokumen ini memiliki beberapa referensi dalam pembuatannya, yaitu sebagai berikut:
 	IEEE. 1998. IEEE Recommended Practice for Software Requirement Specification. New York : IEEE
 	Pressman, Roger S. 2001. Software engineering: a practitioner’s approach 5th ed. New York : McGraw-Hill Companies, Inc.
 
-1.5	Deskripsi umum Dokumen (Ikhtisar)
+1.6	Deskripsi umum Dokumen (Ikhtisar)
 
 	Dokumen Spesifikasi Kebutuhan Perangkat Lunak (SKPL) ini berisikan beberapa bagian besar, antara lain pendahuluan, deskripsi umum perangkat lunak, dan deskripsi kebutuhan.
 	Bagian pendahuluan berisi tujuan penulisan dokumen yang menjelaskan alasan dokumen ini dibuat, lingkup masalah yang berisi ringkasan deskripsi dari aplikasi yang akan dibuat, definisi, istilah dan singkatan yang digunakan dalam dokumen, aturan penomoran yang digunakan dalam dokumen ini, referensi yang dirujuk oleh dokumen dan ikhtisar dokumen ini.

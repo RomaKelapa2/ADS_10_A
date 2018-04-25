@@ -58,9 +58,9 @@
 
 	Tabel 3 Karakteristik pengguna
 	KategoriPengguna		Tugas									Hak Akses ke aplikasi	
-	Peenyewa 			Melihat alat music yang ingin di pinjam					Melakukan pendaftaran dan sign in sebagai pelanggan
-	Pemilik sewa		Memperbarui katalog, data penyewa, data pengembalian barang		Melakukan pendaftaran sebagai pemilik penyewaan , dan sign in sebagai pemilih penyewaan. 
-	Admin				Mengelola pendaftaran , dan mengelola pembayaran dari pelanggan. 	Sign ini sebagai admin,  control panel server, basis data produk
+	Peenyewa 			Melihat alat music yang ingin di pinjam					Melakukan pendaftaran dan sign in sebagai peenyewa
+	Pemilik sewa		Memperbarui katalog, data penyewa, data pengembalian barang		Melakukan pendaftaran sebagai pemilik sewa , dan sign in sebagai pemilih sewa. 
+	Admin				Mengelola pendaftaran , dan mengelola pembayaran dari peenyewa. 	Sign ini sebagai admin,  control panel server, basis data produk
 
 2.3	Batasan
 	Dalam pembuatan perangkat lunak ini, ada beberapa batasan yang digunakan. Batasan-batasan tersebut antara lain :

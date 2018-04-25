@@ -64,8 +64,8 @@
 
 2.3	Batasan
 	Dalam pembuatan perangkat lunak ini, ada beberapa batasan yang digunakan. Batasan-batasan tersebut antara lain :
-	1. Pelanggan bisa menyewa produk jika sudah melakukan sign in
-	2. Pemilih penyewaan bisa bergabung ke aplikasi ini jika sudah mendaftarkan diri sebagai pemilik pnyewaan
+	1. Penyewa bisa menyewa produk jika sudah melakukan sign in
+	2. Pemilih sewa bisa bergabung ke aplikasi ini jika sudah mendaftarkan diri sebagai pemilik sewa
 	3. Aplikasi hanya menyediakan katalog alat music dan tempat penyewaan , form pemesanan alat, daftar keranjang alat, dan konfirmasi pembayaran.
 	4. Aplikasi harus berfungsi pada platform Android.
 

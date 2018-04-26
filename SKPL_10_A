@@ -1,0 +1,343 @@
+1. Pendahuluan
+
+1.1	Tujuan Penulisan Dokumen
+	Dokumen ini ditulis dalam rangka menjabarkan spesifikasi kebutuhan perangkat lunak yang mana akan digunakan oleh ADS_10_A. Detail penjabaran spesifikasi perangkat lunak meliputi deskripsi umum perangkat lunak dan deskripsi kebutuhan perangkat lunak. Perangkat lunak yang akan dibangun bernama Sewa Aja. Dalam rangka membangun perangkat lunak tersebut, tentunya spesifikasi kebutuhan untuk perangkat lunak tersebut dibutuhkan, khususnya oleh para pengembang dan pembangun perangkat lunak tersebut.
+
+1.2	Lingkup Masalah
+	Aplikasi Sewa Aja adalah sebuah aplikasi penyewaan alat kesenian berbasis android  yang menjembatani antara pemilik  alat kesenian dengan penyewa . Sistem ini di bangun untuk memenuhi permintaan pemilik Start Up. Pengguna perangkat lunak dapat melakukan pendaftaran, sign in, melihat katalog, memilih produk, menyewa produk yang diinginkan, melihat jadwal pengembalian, dan melakukan pembayaran. Sistem ini dikelola oleh seorang admin yang bertugas mengelola administrasi pendaftaran, mengelola data , dan mengontrol laporan. Sementara pemilik alat dapat mengupgrade daftar katalog, melihat daftar penyewa dan melakukan konfirmasi jika penyewa melakukan penyewaan atau pengembalian. Data-data yang dikelola admin dipertanggung jawabkan kepada Pemilik Startup di mana seorang manajer dari Pemilik Startup akan mengunjungi kantor Sewa Aja dan melakukan observasi serta meminta laporan pertanggung jawaban.
+
+1.3	Definisi, Istilah dan Singkatan
+	Berikut definisi, istilah serta singkatan yang digunakan dalam dokumen ini :
+	DFD		: Data Flow Diagram. Diagram yang menggambarkan aliran data.
+	ERD		: Entity Relationship Diagram. Diagram yang menggambarkan entitas suatu objek beserta relasinya.
+	Interface	: Antarmuka antara perangkat lunak dan pengguna
+	Data store	: Tempat penyimpanan data
+	API		: Aplication Programming Interface
+
+1.4	Aturan Penomoran
+	Dalam dokumen ini, terdapat beberapa aturan penomoran yang dipakai. Untuk daftar penamaan perangkat lunak dijelaskan pada tabel dibawah ini :
+ 	Aturan penomoran
+	Nama-ID	                	Aturan penamaan			Deskripsi
+	Kebutuhan fungsional		SRS-F-IN/PR/OUT-xxx		SRS adalah System Requirement Summary,
+								      	F adalah Fungsional
+								      	IN menunjukkan operasi Input
+								      	PR menunjukkan operasi Proses
+								      	OUT menunjukkan output
+								      	xxx adalah nomor SRS-Id.
+
+	Kebutuhan	            	SRS-NF-IN/PR/OUT-xxx		SRS adalah System Requirement Summary
+	non fungsional		                          		NF adalah non-Fungsional
+									IN menunjukkan operasi Input
+									PR menunjukkan operasi Proses
+									OUT menunjukkan operasi Output
+									xxx adalah nomor SRS-Id.
+
+	Bubble	              		DFD-X-Y.Z	            	DFD adalah Data Flow Diagram
+								    	X adalah nomor level diagram
+								    	Y.Z adalah nomer pada buble diagram
+
+
+1.5	Referensi
+
+	Dokumen ini memiliki beberapa referensi dalam pembuatannya, yaitu sebagai berikut:
+	IEEE. 1998. IEEE Recommended Practice for Software Requirement Specification. New York : IEEE
+	Pressman, Roger S. 2001. Software engineering: a practitioner’s approach 5th ed. New York : McGraw-Hill Companies, Inc.
+
+1.6	Deskripsi umum Dokumen (Ikhtisar)
+
+	Dokumen Spesifikasi Kebutuhan Perangkat Lunak (SKPL) ini berisikan beberapa bagian besar, antara lain pendahuluan, deskripsi umum perangkat lunak, dan deskripsi kebutuhan.
+	Bagian pendahuluan berisi tujuan penulisan dokumen yang menjelaskan alasan dokumen ini dibuat, lingkup masalah yang berisi ringkasan deskripsi dari aplikasi yang akan dibuat, definisi, istilah dan singkatan yang digunakan dalam dokumen, aturan penomoran yang digunakan dalam dokumen ini, referensi yang dirujuk oleh dokumen dan ikhtisar dokumen ini.
+	Bagian deskripsi umum perangkat lunak berisi deskripsi umum dari sistem yang dibuat, karakteristik pengguna sistem, batasan yang dipakai dalam perangkat lunak itu sendiri, dan lingkungan operasi yang diperuntukan bagi perangkat lunak yang dibuat.
+	Bagian deskripsi kebutuhan di dalam dokumen ini meliputi kebutuhan antarmuka eksternal, kebutuhan fungsional, kebutuhan non fungsional, kebutuhan data, batasan perancangan perangkat lunak, keruntunan, dan ringkasan dari kebutuhan perangkat lunak, baik itu kebutuhan fungsional maupun kebutuhan non fungsional. Kebutuhan antarmuka eksternal meliputi antarmuka pemakai, antarmuka perangkat keras, antarmuak perangkat lunak, dan antarmuka komunikasi. Kebutuhan fungsional dan kebutuhan non fungsional perangkat lunak diuraikan dengan lengkap di bagian ini dan ringkasan dari kebutuhan perangkat lunak yang dibuat disertakan dalam dokumen ini. Kebutuhan fungsional perangkat lunak digambarkan dalam spesifikasi proses. Kebutuhan data dari perangkat lunak digambarkan dalam Entity Relationship Diagram (E-R Diagram). Batasan perancangan dari perangkat lunak yang akan dibuat tentunya harus dijelaskan dalam dokumen ini agar pengembang perangkat lunak lebih mudah dalam melakukan pekerjaannya. 
+
+2. Deskripsi Umum Perangkat Lunak
+
+2.1 Deskripsi umum system
+	Sewa aja adalah aplikasi berbasis android yang berguna untuk mencari tempat peminjaman alat music yang berbasis android. Pengguna aplikasi ini yaitu penyewa dan pemilik sewa. Pengguna aplikasi dapat mendaftarkan diri sebagai pelanggan dan pemilik sewa. penyewa yang telah mendaftarkan diri pada aplikasi ini bisa melakukan sign in untuk melihat atau mencari daftar alat-alat yang disewakan maupun tempat penyewaan alat, selain itu penyewa bisa melakukan pembayaran . Sedangkan pemilik sewa alat jika sudah mendaftar ke aplikasi ini bisa melihat dan mengedit katalog alat-alat music yang disewakan dan juga bisa melihat daftar alat-alat music dan tempat penyewaan alat music yang sudah terdaftar di aplikasi ini, melakukan konfirmasi pembayaran, pengambilan alat dan pengembalian alat. Penyewa yang ingin melakukan penyewaan alat tinggal mencari di menu pencarian . setelah menemukan alat yang ingin disewa , penyewa tinggal mengisi form penyewaan seperti alat sewa, tanggal pengambilan dan pengembalian. Setelah itu akan muncul harga yang harus dibayar. Penyewa bisa melakukan pembayaran melalui atm atau bisa langsung di tempat pemilik sewa. Sedangkan pemilik sewa alat musik jika sudah mendaftarkan diri bisa langsung melakukan update data tentang daftar alat yang disewakan dan harga yang diberikan untuk menyewa alat tersebut, penyewa yang sudah melakukan pembayaran penyewaan alat bisa melihat status penyewaannya jika pembayaran sudah masuk di rekening admin dan admin akan mengkonfirmasikepada pemilik sewa maka pemilih sewa alat akan memberikan knfirmasi pembayaran yang sudah dilakukan oleh penyewa , sehingga pepenyewa bisa mengambil alat tersebut jika sudah masuk tempo tanggal pengambilan serta mengembalikan alat, sehingga pemilik sewa akan melakukan konfirmasi pengambilan dan pengembalian. Admin disini bertugas untuk mengelola pendaftaran user sebagai pelanggan atau pemilik alat sewa yang mendaftarkan ke aplikasi . Selain itu admin juga mengelola pembayaran yang sudah dilakukan oleh penyewa supaya tidak terjadi penipuan , dan mengecek laporan yang ada pada aplikasi.
+2.2	Karakteristik Pengguna
+
+	Tabel 3 Karakteristik pengguna
+	KategoriPengguna		Tugas									Hak Akses ke aplikasi	
+	Peenyewa 			Melihat alat music yang ingin di pinjam					Melakukan pendaftaran dan sign in sebagai peenyewa
+	Pemilik sewa		Memperbarui katalog, data penyewa, data pengembalian barang		Melakukan pendaftaran sebagai pemilik sewa , dan sign in sebagai pemilih sewa. 
+	Admin				Mengelola pendaftaran , dan mengelola pembayaran dari peenyewa. 	Sign ini sebagai admin,  control panel server, basis data produk
+
+2.3	Batasan
+	Dalam pembuatan perangkat lunak ini, ada beberapa batasan yang digunakan. Batasan-batasan tersebut antara lain :
+	1. Penyewa bisa menyewa produk jika sudah melakukan sign in
+	2. Pemilih sewa bisa bergabung ke aplikasi ini jika sudah mendaftarkan diri sebagai pemilik sewa
+	3. Aplikasi hanya menyediakan katalog alat music dan tempat penyewaan , form pemesanan alat, daftar keranjang alat, dan konfirmasi pembayaran.
+	4. Aplikasi harus berfungsi pada platform Android.
+
+
+2.4	Lingkungan Operasi
+
+	Aplikasi Sewa Aja ini akan berfungsi dengan spesifikasi :
+	Server  :
+	Komputer dengan spesifikasi hardware minimal sebagai berikut :
+		Processor Intel Pentium 4 3 Ghz
+		Motherboard support internet connection
+		2 GB RAM
+		500 GB Hard Disk Drive utama 
+		500 GB Hard Disk Drive backup 
+		VGA Card 256 MB
+		NIC FastEthernet atau Gigabit Ethernet Mouse
+		Keyboard MonitorPower Supply
+		Komputer yang minimal telah terinstall software sebagai berikut :
+		Browser Google Chrome/Mozilla firefox
+		Apache HTTP Server Mail Server
+	
+	DBMS (Database Management System) minimal MySQL 5.0.20 ke atas Koneksi internet dengan bandwidth minimal 1 Mbps OS minimal Windows 2003 Server atau Ubuntu Server
+	Client :
+		Smartphone dengan spesifikasi hardware minimal sebagai berikut :
+		Os Android ICS
+		RAM 512 Mb
+		Prosesor 1,3 Ghz
+		Koneksi internet
+
+3. Deskripsi Kebutuhan 
+
+3.1	Kebutuhan Antarmuka Eksternal 
+	Perangkat Lunak Sewa Aja membutuhkan fasilitas-fasilitas antar muka eksternal sebagai berikut : 
+   3.1.1 Antarmuka pemakai 
+	 User interface yang digunakan untuk mengoperasikan Perangkat Lunak Sewa Aja antara lain: 
+		• Tampilan awal mobile app 
+		• Tampilan login 
+		• Tampilan registrasi 
+		• Tampilan katalog alat&tempat
+		• Tampilan pemesanan/pembayaran
+		• Tampilan pengembalian
+		• Tampilan Laporan(Grafik dan Tabel)
+   	 Alat-alat yang mendukung antarmuka pemakai adalah sebagai berikut:
+		• Keyboard 
+		• Mouse 
+		• Monitor 
+   3.1.2 Antarmuka Perangkat Keras 
+	 Antarmuka perangkat keras yang digunakan untuk mengoperasikan perangkat lunak antara lain : 
+		• Smartphone
+   3.1.3 Antarmuka Perangkat Lunak 
+	 Antarmuka perangkat lunak yang digunakan oleh perangkat lunak ini adalah sebagai berikut : 
+		• Android Studio versi 4.0-4.02 Ice Cream Sandwich (API Level 14)
+		• SQLite
+		• API E-Bangking
+   3.1.4 Antarmuka Komunikasi 
+	 Antarmuka komunikasi yang digunakan untuk mengoperasikan perangkat lunak antara lain : 
+		• Kuota Internet
+
+3.2	Kebutuhan Fungsional 
+
+	Tabel 4 Kebutuhan fungsional 
+	ID		Kebutuhan  					Penjelasan 
+	SRS-F-
+	OUT-001 	Perangkat lunak dapat menampilkan form login 	Pengguna yang telah terdaftar dapat melakukan login sehingga perangkat lunak perlu menampilkan form login pengguna yang telah registrasi akan login menggunakan username dan password 
+	SRS-F-
+	OUT-002 	Perangkat lunak dapat menampilkan form entri 	Form entri registrasi ditampilkan saat pengguna melakukan pendaftaran sebagai penyewa dengan entri data diri meliputi email dan kontak penyewa
+			registrasi	
+	SRS-F-
+	OUT-003 	Perangkat lunak dapat menerima masukan dari 	Data penyewa yang dimasukkan oleh pengguna dapat diterima oleh perangkat lunak
+			pengguna, berupa data penyewa  	 
+	SRS-F-
+	OUT-004 	Perangkat lunak dapat menyimpan data penyewa 	Setelah pengguna yang melakukan registarasi sebagai penyewa memasukkan data yang dibutuhkan, perangkat lunak menyimpan data tersebut dan memasukkandata ke dalam list tabel penyewaan sehingga data dapat dihapus, ditambah, dan di edit
+	SRS-F-
+	OUT-005 	Perangkat lunak dapat menampilkan pesan berupa  Setelah perangkat lunak menghitung harga total yang harus dibayar penyewa, perangkat lunak menampilkan informasi tersebut
+			harga total yang harus dibayarkan 	 
+	SRS-F-		Perangkat lunak dapat menyediakan mode		Untuk memilih alat dan alamat tempat, pengguna dapat menggunakan mode pencarian yang terdapat pada perangkat lunak
+	PR006  	 	pencarian terhadap alat dan alamat tempat,
+			sesuai dengan input dari penyewa
+
+	SRS-F-		Perangkat lunak dapat menerima masukan		Username dan password yang dimasukkan penyewa harus dapat diterima oleh perangkat lunak
+	IN007  	 	username dan password penyewa 									
+
+	SRS-F-		Perangkat lunak dapat menampilkan katalog	Katalog memiliki informasi nama, kategori, harga, dan jumlah alat beserta alamat tempat yang tersedia
+	OUT-008 	alat&tempat	
+
+
+	SRS-F-		Perangkat lunak dapat menghitung jumlah uang 	Setelah penyewa memilih alat, alamat dan memesan tempat beserta jumlahnya, perangkat lunak melakukan penghitungan jumlah uang yang harus dibayarkan oleh penyewa
+	PR009  		yang harus dibayarkan oleh penyewa 
+
+	SRS-F-		Perangkat lunak dapat menyimpan data 		Data pemesanan yang terjadi dapat disimpan oleh perangkat lunak dan penyewa dapat melakukan pembayaran dengan kerjasama jasa transaksi pembayaran online melalui e-bangking
+	PR010  		pemesanan/pembayaran
+
+	SRS-F-		Perangkat lunak dapat menyimpan data 		Data katalog yang diperbaharui oleh admin dapat disimpan oleh perangkat lunak 
+	PR011 		katalog alat&tempat
+
+	SRS-F-		Perangkat lunak dapat menampilkan  		Pengguna dapat memilih metode pembayaran untuk melakukan pembayaran alat&tempat
+	OUT-012 	form pembayaran
+
+	SRS-F-		Perangkat lunak dapat menerima masukan berupa  	Penyewa yang melakukan pemesanan akan memasukkan data alat&tempat yang ingin dipesan beserta jumlahnya, sehingga data tersebut dapat diterima oleh perangkat lunak
+	IN013 	 	rekomendasi alat&tempat yang dipesan penyewa 
+			beserta jumlahnya
+
+	SRS-F-		Perangkat lunak dapat mengirimkan notifikasi 	Setelah uang pembayaran diterima, konfirmasi pembayaran akan dikirim melalui e-mail oleh perangkat lunak
+	OUT-014 	pembayaran kepada penyewa	 
+
+	ID 		Kebutuhan  					Penjelasan 
+
+	SRS-F-		Perangkat lunak dapat mengirimkan notifikasi  	Saat Start Up tidak memliki stok daftar alat&tempat, maka perangkat lunak akan mengirimkan notifikasi permintaan alat&tempat kepada penyedia alat&tempat sebenarnya
+	OUT-015 	permintaan alat&tempat kepada penyedia 
+			alat&tempat sebenarnya
+
+	SRS-F-		Perangkat lunak dapat mengirimkan notifikasi  	Setelah uang pembayaran diterima, permintaan pengiriman alat sewa kepada penyewa akan dikirimkan kepada penyewa
+	OUT-016 	pengiriman alat sewa kepada penyewa
+
+	SRS-F-		Perangkat lunak dapat memperbaharui katalog 	Admin dapat melakukan pembaharuan data katalog alat&tempat melalui perangkat lunak yang dibuat
+	IN017 	 	alat&tempat
+
+	SRS-F-		Perangkat lunak dapat menampilkan form 		Penyewa yang melakukan pemesanan alat&tempat dilayani oleh perangkat lunak dengan form penyewaan alat&tempat
+	OUT-018 	penyewaan alat&tempat
+
+	SRS-F-		Perangkat lunak dapat menampilkan form entri 	Apabila ada permintaan pembaharuan data katalog alat&tempat, perangkat lunak menampilkan form entri katalog yang dilakukan oleh penyedia alat&tempat sewa
+	OUT-019 	katalog alat&tempat
+
+	SRS-F-		Perangkat lunak dapat menampilkan informasi  	Perangkat lunak mengolah informasi pemesanan dan menampilkan hasil pengolahan dalam bentuk tabel
+	OUT-020 	pemesanan dalam kurun waktu tertentu 
+			(harian, mingguan, dan/atau bulanan) 
+			dalam bentuk tabel
+
+	SRS-F-		Perangkat lunak dapat menampilkan informasi  	Perangkat lunak mengolah informasi pemesanan dan menampilkan hasil pengolahan dalam bentuk grafik
+	OUT-021 	pemesanan dalam kurun waktu tertentu 
+			(harian, mingguan, dan/atau bulanan) 
+			dalam bentuk grafik
+
+	SRS-F-		Perangkat lunak dapat meng-generate laporan  	Apabila ada permintaan laporan pertanggungjawaban, perangkat lunak akan meng-generate laporan pertanggungjawaban
+	PR022 	 	pertanggungjawaban
+
+3.2.1	Diagram Konteks 
+3.2.2	DFD Level 1 
+	3.2.2.1 DFD Level 2 <Proses registarasi>
+	3.2.2.2 DFD Level 2 <Proses lihat dan update katalog alat&tempat> 
+	3.2.2.3 DFD Level 2 <Proses Pemesanan>
+	3.2.2.4 DFD Level 2 <Proses Pembayaran> 
+	3.2.2.5 DFD Level 2 <Proses Pengembalian>
+	3.2.2.6 DFD Level 2 <Generate laporan> 
+	
+3.2.3	Spesifikasi Proses (P-SPEC) 
+
+3.2.4 	Data Store 
+	Tabel 6 Data Store 
+	Data Store 					Deskripsi 
+	Data_admin					Berisi deskripsi admin yang yang melakukan login dan pembaruan/update data
+	Data_penyewa 					Berisi deskripsi penyewa yang telah melakukan registrasi. Sepeti nama, no.handphone, email serta alamat penyewa 
+	Data_pemesanan_pembayaran 			Ketika user selesai melakukan pencarian dan melakukan pemesanan, maka data pemesanan tersebut akan tersimpan pada data store ini. Data_pemesanan akan digunakan oleh bank untuk melakukan validasi proses pembayaran 
+	Data_pengembalian				Kertika user sebagai penyewa telah melakukan pengembalian, maka data pengembalian tersebut akan tersimpan pada data store.
+	Data_katalog_alat_tempat			Berisi data yang mengelola data katalog untuk data alat dan tempat. Menyimpan gambar dari alat&tempat, kategori alat&tempat, nama alat&tempat dll 
+
+3.2.4	Spesifikasi Proses (P-SPEC) 
+	Tabel 5 Spesifikasi Proses 
+	Kode buble 	Deskripsi 
+	DFD-0-1 	Proses ini merupakan gambaran sistem secara keseluruhan. Melibatkan terminator serta data flow yang keluar-masuk kedalam sistem. Buble 0 akan dideskripsikan pada DFD level selanjutnya agar bisa memberikan gambaran secara lebih rinci dan spesifik. 
+	DFD-1-1 	Terminator yang dapat melakukan pilihan input adalah penyewa dan admin, karena kedua terminator ini merupakan pengguna aktif yang dapat berinteraksi dengan user. Proses mengeluarkan output sesuai dengan pilihan user, yang akan meneruskan data flow pada proses yang sesuai dengan pilihan user. 
+	DFD-1-2 	Proses ini akan terjadi ketika user memilih menu pilihan registrasi. User yang belum terdaftar dapat melakukan registrasi sehingga data hasil registrasi tersebut akan tersimpan pada data penyewa 
+	DFD-1-3 	Penyewa yang telah terdaftar dapat melihat katalog alat&tempat yang disediakan dari data katalog. Proses ini menerima input dari data penyewa agar mampu memvalidasi apakah user yang sedang aktif merupakan penyewa atau tidak. Selain itu admin dapat melakukan piihan untuk melakukan update katalog. Data yang telah di update akan disimpan pada data katalog. 
+	DFD-1-4 	Proses ini menerima data flow berupa Pil_sewa dan Pil_Pencarian. Proses ini memerlukan data store dan data katalog alat&tempat agar bisa melakukan proses pemesanan. Setelah keluar dari proses ini, akan didapatkan data pesanan(mulai dari nama_alat, nama_tempat, jumlah_alat, total_harga dll). Jika alat yang dipesan tidak ada maka sistem akan memberikan notifikasi. 
+	DFD-1-5 	Penyewa harus melalui tahap pembayaran agar alat yang  dipesan bisa dikirimkan. Proses ini menerima konfirmasi pembayaran dari bank, serta konfirmasi pengiriman dari penyewa melalui sistem. Selain itu, proses ini akan mengeluarkan data form pembayaran yang akan digunakan oleh bank, serta permintaan pengiriman kepada penyewa. 
+	DFD-1-6 	Proses ini untuk pengembalian alat yang dilakukan oleh penyewa kepada sistem kemudian akan memberikan status konfirmasi pengembalian jika alat yang disewa sudah dikembalikan ke tempat sewa.
+	DFD-1-7		Proses ini menerima input pilihan laporan yang dikirim oleh admin, kemudian melakukan proses generate laporan sehingga admin bisa mendapatkan laporan untuk dicetak sebagai rekap data laporan. 
+	DFD-2-2.1 	Proses ini dibuat agar bisa memenuhi spesifikasi user requirment yang dibuat. Apabila pengguna memilih menu registrasi, maka sistem akan meminta masukan kepada penyewa berupa data apa saja yang dibutuhkan. Oleh karena itu output dari proses ini berupa data form yang akan diisi oleh penyewa.
+	DFD-2-2.2 	Data form yang telah ditampilkan harus diisi oleh pengguna. Apabila telah tervalidasi, maka status pengguna akan naik menjadi penyewa. Disini data penyewa akan disimpan dalam data store penyewa.
+	DFD-2-2.3 	Apabila user telah terdaftar, maka user cukup melakukan login sebagai penyewa. Proses ini merupakan proses pengecekan terhadap seorang user. 
+	DFD-2-3.1 	Penyewa dapat melihat data katalog alat&tempat yang tersedia.
+	DFD-2-3.2 	Admin dapat melakukan update pada katalog alat&tempat. 
+	DFD-2-4.1 	Apabila penyewa memilih menu Pil_sewa, maka penyewa dapat memilih alat yang ingin dipesan. Keluaran dari proses ini berupa data pesanan (kd_alat, nama_alat, jenis_alat, jumlah_alat, total_harga dan tgl_pesan yang harus dibayarkan) 
+	DFD-2-4.2 	Proses pencarian alat&tempat dapat dipilih oleh penyewa. Software akan menampilkan data alat&tempat sesuai kriteria yang diinginkan penyewa. 
+	DFD-2-5.1 	Proses ini transfer uang dilakukan di dalam maupun luar sistem sesuai jarak atau lokasi penyewa. Transfer uang dalam proses ini diartikan sebagai input jumlah uang yang sesuai dengan data pemesanan.  
+	DFD-2-5.2 	Proses ini menerima input data proses 5.1. Pada bagian ini akan dilakukan pengisian form pembayaran oleh user yang datanya akan dipakai oleh pihak bank. Proses ini juga akan mengirimkan status kelunasan pembayaran. 
+	DFD-2-5.3 	Proses akan menerima konfirmasi_pembayaran dari Bank, apabila telah terbukti lunas, maka proses akan mengirimkan permintaan pengiriman alat pada kurir. Setelah melakukan pengiriman, kurir wajib melakukan akses ke sistem dan mengirimkan bahwa alat telah sampai pada penyewa. 
+	DFD-2-6.1	Proses ini akan menerima konfirmasi pengembalian oleh penyewa dengan bukti transaksi sewa alat.
+	DFD-2-7.1 	Apabila kondisi memungkinkan, admin mempunyai hak untuk melakukan pemesanan alat&tempat. Proses ini menerima input Data_alat&tempat kosong yang dihasilkan pada proses 6.1, kemudian memberikan output data_permintaan alat&tempat 
+			Untuk mengirimkan laporan dari admin untuk di data rekap, admin memiliki hak akses untuk mencetak laporan. Data ini diperoleh dari data store yang terkait dengan pemesanan. 
+			Admin dapat melakukan Pil_info Pemesanan untuk mendapatkan grafik dan data pemesanan alat&tempat yang berupa tabel.
+	DFD-2-7.2 	Proses ini untuk mencetak laporan pemesanan yang berisi segala transaksi dan konfirmasi pemesanan sewa alat oleh penyewa kepada penyedia sewa alat.
+	DFD-2-7.3 	Proses ini untuk mencetak laporan pembayaran yang berisi segala transaksi dan konfirmasi pembayaran sewa alat oleh penyewa kepada penyedia sewa alat.
+	DFD-2-7.4 	Proses ini untuk mencetak laporan pengembalian yang berisi segala transaksi dan konfirmasi pengembalian sewa alat oleh penyewa kepada penyedia sewa alat.
+3.3 Kebutuhan Data 
+	3.3.1 E-R diagram 
+3.4 Kebutuhan Non Fungsional 
+    Kebutuhan non fungsional yang terdapat pada perangkat lunak Sewa Aja antara lain. 
+    Tabel 7 Kebutuhan non fungsional 
+	ID 		Parameter 						Kebutuhan 
+	SRS-NF-OUT-023 	Availability 						Perangkat Lunak harus terus dapat beroperasi 7 hari perminggu, 24 jam per hari tanpa gagal  
+	SRS-NF-PR-024 	Reliability 						Kegagalan dalam proses transaksi memiliki toleransi satu kali gagal dalam satu minggu 
+	SRS-NF-OUT-025 	Ergonomy 						Tampilan antarmuka mobile android mudah dipahami user dan estetikanya bagus 
+	SRS-NF-PR-026 	Portability 						Perangkat Lunak dapat diintall dan dipakai di platform dekstop Windows dan Linux 
+			Memory 	N/A 
+	SRS-NF-PR-027 	Response time 						Perangkat Lunak mampu mengirimkan notifikasi e-mail kepada pengguna maksimal dalam waktu 30 detik 
+	SRS-NF-PR-028 	Response time 						Perangkat Lunak mampu melakukan update data dalam waktu 5 detik 
+			Safety 	N/A 
+ 
+	ID 		Parameter 						Kebutuhan 
+	SRS-NF-IN-030 	Security 						Perangkat lunak menolak input pengguna yang akan mendaftarkan diri dengan password kurang dari 8 karakter 
+	SRS-NF-OUT-031 	Others 1 : Bahasa komunikasi 				Semua tanya jawab ataupun tulisan dalam antarmuka disediakan dalam bahasa 2 bahasa yakni bahasa Indonesia dan bahasa Inggris 
+	SRS-NF-OUT-032 	Others 2 : Tampilan Logo Start Up 			Setiap layer harus mengandung logo Sewa Aja
+ 
+3.5 Batasan Perancangan 
+ 
+	Batasan perancangan yang dipakai dalam pengembangan perangkat lunak Sewa Aja antara lain.  
+		• Tampilan mobile android dibuat dengan menggunakan pencil ,photoshop dan corel draw
+		• Implementasi model interface dan pemrograman android menggunakan tools androidstudio
+		• Bahasa pemrograman yang digunakan adalah Java 
+3.6 Kerunutan (traceability) 
+	Suatu perangkat lunak yang baik memiliki kebutuhan fungsional yang dapat dirunut model analisisnya. Berikut ini adalah tabel yang berisi traceability dari hasil analisis kebutuhan perangkat lunak yang dibangun.  
+ 
+3.6.1	Kebutuhan Fungsional vs Proses 
+		Mapping kebutuhan fungsional dengan proses pada DFD untuk perangkat lunak Sewa Aja adalah sebagai berikut. 
+ 
+	Tabel 8 Kebutuhan Fungsional vs proses 
+3.6.2	Data Store vs E-R 
+	Mapping data store pada DFD dengan Entity –Relasi untuk perangkat lunak Sewa Aja adalah sebagai berikut : 
+ 
+	Tabel 9 Data Store vs E-R 
+	Data Store 				Entity 				Relasi 
+	Data_admin				Pengolah Data			Data_admin, data_penyewa, data_penyedia_sewa, data_katalog_alat_tempat, 
+	Data_penyewa 				Penyewa				Data_penyewa, data_katalog_alat_tempat 
+	Data_penyedia_sewa			PenyediaAlat&Tempat		Data_penyedia, data_penyewa, data_pemesanan_pembayaran
+	Data_pemesanan_pembayaran 		Penyewa, Pemesanan,		Pemesannya, terdiri_dari, alatnya,tempatnya dalam_kategori
+						Baris pemesanan, 
+						Alat&Tempat, Kategori 	 
+	Data_pengembalian			Penyewa, Pengembalian, 		Pengembalian, data_penyewa, data_pemesanan, bukti_pesan_kembali
+						BuktiPesanKembali	
+	Data_katalog_alat_tempat		Alat_Tempat, Kategori 		Alat_tempatnya, dalam_kategori 
+
+3.7 Ringkasan Kebutuhan 
+	Perangkat lunak yang dibuat memiliki dua jenis kebutuhan, yaitu kebutuhan fungsional dan kebutuhan non fungsional.Kebutuhan ini mencerminkan semua hal yang harus dipenuhi, dan nantinya akan menjadi arahan untuk tahapan testing, karena pada dasarnya, semua kebutuhan harus dapat ditest. Berikut ini ringkasan semua kebutuhan perangkat lunak Sewa Aja. 
+ 
+3.7.1	Kebutuhan Fungsional 
+	Tabel 10 Kebutuhan Fungsional 
+	ID 		Deskripsi 
+	SRS-F-OUT-001 	Perangkat lunak dapat menampilkan form login 
+	SRS-F-OUT-002 	Perangkat lunak dapat menampilkan form entri registrasi 
+	SRS-F-IN-003 	Perangkat lunak dapat menerima masukan dari penyewa, berupa data penyewa, dan penyedia alat&tempat sewa
+	SRS-F-PR-004 	Perangkat lunak dapat menyimpan data penyewa 
+	SRS-F-OUT-005 	Perangkat lunak dapat menampilkan pesan berupa harga total yang harus dibayarkan 
+	SRS-F-PR-006 	Perangkat lunak dapat menyediakan mode pencarian terhadap alat&penyewa, sesuai dengan input dari penyewa 
+	SRS-F-IN-007 	Perangkat lunak dapat menerima masukan username dan password penyewa 
+	SRS-F-OUT-008 	Perangkat lunak dapat menampilkan katalog alat&penyewa
+	SRS-F-PR-009 	Perangkat lunak dapat menghitung jumlah uang yang harus dibayarkan oleh penyewa 
+	SRS-F-PR-010 	Perangkat lunak dapat menyimpan data pemesanan/pembayaran
+	SRS-F-PR-011 	Perangkat lunak dapat menyimpan data katalog alat&tempat
+	SRS-F-OUT-012 	Perangkat lunak dapat menampilkan form pembayaran 
+	SRS-F-IN-013 	Perangkat lunak dapat menerima masukan berupa alat yang dipesan penyewa beserta jumlahnya 
+	SRS-F-OUT-014 	Perangkat lunak dapat mengirimkan notifikasi pembayaran kepada penyewa 
+	SRS-F-OUT-015 	Perangkat lunak dapat mengirimkan notifikasi permintaan alat&tempat sewa kepada penyedia alat&tempat sewa
+	SRS-F-OUT-016 	Perangkat lunak dapat mengirimkan notifikasi pengiriman alat kepada penyewa
+	SRS-F-IN-017 	Perangkat lunak dapat memperbaharui katalog alat&tempat
+	SRS-F-OUT-018 	Perangkat lunak dapat menampilkan form penyewaan alat&tempat
+	SRS-F-OUT-019 	Perangkat lunak dapat menampilkan form entri katalog alat&tempat sewa yang dientri oleh penyedia sewa
+	SRS-F-OUT-020 	Perangkat lunak dapat menampilkan informasi pemesanan dalam kurun waktu tertentu (harian, mingguan, dan/atau bulanan) dalam bentuk tabel 
+	SRS-F-OUT-021 	Perangkat lunak dapat menampilkan informasi pemesanan dalam kurun waktu tertentu (harian, mingguan, dan/atau bulanan) dalam bentuk grafik 
+	SRS-F-PR-022 	Perangkat lunak dapat meng-generate laporan pertanggungjawaban 
+ 
+ 
+3.7.2	Kebutuhan Non Fungsional 
+	Tabel 11 Kebutuhan Non Fungsional 
+	ID 		Deskripsi 
+	SRS-NF-OUT-023 	Perangkat Lunak harus terus dapat beroperasi 7 hari perminggu, 24 jam per hari tanpa gagal  
+	SRS-NF-PR-024 	Kegagalan dalam proses transaksi memiliki toleransi satu kali gagal dalam satu minggu 
+	SRS-NF-OUT-025 	Tampilan antarmuka mobile android Sewa Aja mudah dipahami user dan estetikanya bagus 
+	SRS-NF-PR-026 	Perangkat Lunak dapat diinstall dan dipakai di platform Android 
+	SRS-NF-PR-027 	Perangkat Lunak mampu mengirimkan notifikasi di apliksi kepada pengguna maksimal dalam waktu 30 detik 
+	SRS-NF-PR-028 	Perangkat Lunak mampu melakukan update data dalam waktu 5 detik 
+	SRS-NF-IN-029 	Perangkat lunak menolak input pengguna yang akan mendaftarkan diri dengan password kurang dari 8 karakter 
+	SRS-NF-OUT-030 	Semua tanya jawab ataupun tulisan dalam antarmuka disediakan dalam 2 bahasa yakni bahasa Indonesia dan bahasa Inggris 
+	SRS-NF-OUT-031 	Setiap layer harus mengandung logo Sewa Aja
+

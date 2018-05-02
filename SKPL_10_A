@@ -104,7 +104,8 @@
 		• Tampilan awal mobile app 
 		• Tampilan login 
 		• Tampilan registrasi 
-		• Tampilan katalog alat&tempat
+		• Tampilan katalog alat&
+		• Tampilan pencarian
 		• Tampilan pemesanan/pembayaran
 		• Tampilan pengembalian
 		• Tampilan Laporan(Grafik dan Tabel)
@@ -112,18 +113,19 @@
 		• Keyboard 
 		• Mouse 
 		• Monitor 
+		• Smartphone
    3.1.2 Antarmuka Perangkat Keras 
 	 Antarmuka perangkat keras yang digunakan untuk mengoperasikan perangkat lunak antara lain : 
 		• Smartphone
    3.1.3 Antarmuka Perangkat Lunak 
 	 Antarmuka perangkat lunak yang digunakan oleh perangkat lunak ini adalah sebagai berikut : 
 		• Android Studio versi 4.0-4.02 Ice Cream Sandwich (API Level 14)
-		• SQLite
+		• SQLite(Database Android)
 		• API E-Bangking
    3.1.4 Antarmuka Komunikasi 
 	 Antarmuka komunikasi yang digunakan untuk mengoperasikan perangkat lunak antara lain : 
 		• Kuota Internet
-
+		• Wifi
 3.2	Kebutuhan Fungsional 
 
 	Tabel 4 Kebutuhan fungsional 
@@ -273,9 +275,10 @@
 3.5 Batasan Perancangan 
  
 	Batasan perancangan yang dipakai dalam pengembangan perangkat lunak Sewa Aja antara lain.  
-		• Tampilan mobile android dibuat dengan menggunakan pencil ,photoshop dan corel draw
+		• Tampilan mock up mobile android dibuat dengan menggunakan pencil ,photoshop dan corel draw
 		• Implementasi model interface dan pemrograman android menggunakan tools androidstudio
-		• Bahasa pemrograman yang digunakan adalah Java 
+		• Bahasa pemrograman yang digunakan adalah Java dan juga XML 
+		• Menggunakan SQLIte sebagai database di android
 3.6 Kerunutan (traceability) 
 	Suatu perangkat lunak yang baik memiliki kebutuhan fungsional yang dapat dirunut model analisisnya. Berikut ini adalah tabel yang berisi traceability dari hasil analisis kebutuhan perangkat lunak yang dibangun.  
  

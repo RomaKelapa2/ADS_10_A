@@ -21,36 +21,39 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/Cari Alat"
+        android:id="@+id/Cari_alat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/linearLayout"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="94dp"
+        android:layout_marginTop="100dp"
         android:background="@android:color/holo_blue_bright"
-        android:text="Cari Alat" />
+        android:text="Cari Alat"
+        android:onClick="Cari_alat"/>
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/Lihat_katalog"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/Cari Alat"
-        android:layout_marginTop="50dp"
+        android:layout_below="@+id/Cari_Alat"
+        android:layout_marginTop="175dp"
         android:layout_toEndOf="@+id/linearLayout"
         android:layout_toRightOf="@+id/linearLayout"
         android:background="@android:color/holo_blue_bright"
-        android:text="Katalog Kesenian " />
+        android:text="Lihat Katalog "
+        android:onClick="Lihat_katalog"/>
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/Bayar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/button3"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="250dp"
         android:background="@android:color/holo_blue_bright"
-        android:text="Bayar" />
+        android:text="Bayar"
+        android:onClick="Bayar"/>
 
 
 </RelativeLayout>

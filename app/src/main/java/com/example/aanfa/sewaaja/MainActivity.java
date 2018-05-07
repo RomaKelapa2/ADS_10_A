@@ -17,8 +17,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getSupportActionBar().setTitle("User Login Sederhana");
-        getSupportActionBar().setSubtitle("oke");
+        getSupportActionBar().setTitle("SewaAja");
+        getSupportActionBar().setSubtitle("");
 
     }
 
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Kondisi jika username dan password benar maka akan menampilkan pesan text toast
         //Login sukses dan masuk ke activity 2
-        if ((text1.contains("Username"))&&((text2.contains("Password")))) {
+        if ((text1.contains("Admin"))&&((text2.contains("Admin")))) {
             Toast.makeText(this, "Login Sukses", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(MainActivity.this, SecondActivity.class);
             startActivity(intent);

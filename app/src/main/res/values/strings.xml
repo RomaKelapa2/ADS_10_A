@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">SewaAja</string>
+    <string-array name="listtempat">
+        <item>Musik Sewa</item>
+        <item>Aladin</item>
+        <item>Nyewo Alatku</item>
+        <item>Zak Sewa</item>
+    </string-array>
+    <string-array name="listalat">
+        <item>Gitar</item>
+        <item>Piano</item>
+        <item>Seruling</item>
+    </string-array>
 </resources>

@@ -59,8 +59,8 @@
 	Tabel 3 Karakteristik pengguna
 	KategoriPengguna		Tugas									Hak Akses ke aplikasi	
 	Peenyewa 			Melihat alat music yang ingin di pinjam					Melakukan pendaftaran dan sign in sebagai peenyewa
-	Pemilik sewa		Memperbarui katalog, data penyewa, data pengembalian barang		Melakukan pendaftaran sebagai pemilik sewa , dan sign in sebagai pemilih sewa. 
-	Admin				Mengelola pendaftaran , dan mengelola pembayaran dari peenyewa. 	Sign ini sebagai admin,  control panel server, basis data produk
+	Pemilik sewa			Memperbarui katalog, data penyewa, data pengembalian barang		Melakukan pendaftaran sebagai pemilik sewa , dan sign in sebagai pemilih sewa. 
+	Admin				Mengelola pendaftaran , dan mengelola pembayaran dari penyewa. 		Sign ini sebagai admin,  control panel server, basis data produk
 
 2.3	Batasan
 	Dalam pembuatan perangkat lunak ini, ada beberapa batasan yang digunakan. Batasan-batasan tersebut antara lain :
@@ -104,7 +104,7 @@
 		• Tampilan awal mobile app 
 		• Tampilan login 
 		• Tampilan registrasi 
-		• Tampilan katalog alat&
+		• Tampilan katalog alat&tempat
 		• Tampilan pencarian
 		• Tampilan pemesanan/pembayaran
 		• Tampilan pengembalian
@@ -276,7 +276,7 @@
 3.5 Batasan Perancangan 
  
 	Batasan perancangan yang dipakai dalam pengembangan perangkat lunak Sewa Aja antara lain.  
-		• Tampilan mock up mobile android dibuat dengan menggunakan pencil ,photoshop dan corel draw
+		• Tampilan mockup mobile android dibuat dengan menggunakan pencil ,photoshop dan corel draw
 		• Implementasi model interface dan pemrograman android menggunakan tools androidstudio
 		• Bahasa pemrograman yang digunakan adalah Java dan juga XML 
 		• Menggunakan SQLIte sebagai database di android

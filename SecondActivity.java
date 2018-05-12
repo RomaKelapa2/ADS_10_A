@@ -18,12 +18,12 @@ public class SecondActivity extends AppCompatActivity {
     }
 
     public void Pelanggan(View view) {
-        Intent intent = new Intent(SecondActivity.this, Main2Activity.class);
+        Intent intent = new Intent(SecondActivity.this, nav_penyewa.class);
                 startActivity(intent);
     }
 
     public void Pemilik_alat(View view) {
-        Intent intent = new Intent(SecondActivity.this, Main3Activity.class);
+        Intent intent = new Intent(SecondActivity.this, nav_pemilik.class);
         startActivity(intent);
     }
 

@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="16dp">
+        <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/katalog1"
+        >
+        <ImageView
+            android:id="@+id/Makanalat"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:src="@mipmap/gitar"
+            android:onClick="Makanalat"
+
+            />
+        <TextView
+            android:id="@+id/nama_tempat1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama Tempat   : Just musik"
+            android:layout_toEndOf="@id/icon1"
+            android:textColor="@color/md_black_1000"
+            android:textSize="12sp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="8dp"
+            />
+        <TextView
+            android:id="@+id/alat1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama Alat          : Gitar"
+            android:layout_toEndOf="@id/icon1"
+            android:layout_below="@+id/nama_tempat1"
+            android:textColor="@color/md_black_1000"
+            android:textSize="12sp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="8dp"
+            />
+        <TextView
+            android:id="@+id/harga1" android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Harga                  : Rp.15000/hari"
+            android:layout_toEndOf="@id/icon1"
+            android:layout_below="@+id/alat1"
+            android:textColor="@color/md_black_1000"
+            android:textSize="12sp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="8dp"
+            />
+        <TextView
+            android:id="@+id/alamat1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alamat                : Jl. Sapu No.6 Malang"
+            android:layout_toEndOf="@id/icon1"
+            android:layout_below="@+id/harga1"
+            android:textColor="@color/md_black_1000"
+            android:textSize="12sp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="8dp"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/katalog1"
+        >
+        <ImageView
+            android:layout_marginTop="8dp"
+            android:id="@+id/icon1"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:src="@mipmap/piano"
+
+            />
+        <TextView
+            android:id="@+id/nama_tempat1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama Tempat   : Just musik"
+            android:layout_toEndOf="@id/icon1"
+            android:textColor="@color/md_black_1000"
+            android:textSize="12sp"
+            android:paddingBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:paddingLeft="8dp"
+            />
+        <TextView
+            android:id="@+id/alat1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama Alat          : Piano"
+            android:layout_toEndOf="@id/icon1"
+            android:layout_below="@+id/nama_tempat1"
+            android:textColor="@color/md_black_1000"
+            android:textSize="12sp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="8dp"
+            />
+        <TextView
+            android:id="@+id/harga1" android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Harga                  : Rp.150000/hari"
+            android:layout_toEndOf="@id/icon1"
+            android:layout_below="@+id/alat1"
+            android:textColor="@color/md_black_1000"
+            android:textSize="12sp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="8dp"
+            />
+        <TextView
+            android:id="@+id/alamat1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alamat                : Jl. Sapu No.6 Malang"
+            android:layout_toEndOf="@id/icon1"
+            android:layout_below="@+id/harga1"
+            android:textColor="@color/md_black_1000"
+            android:textSize="12sp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="8dp"
+            />
+    </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/katalog1"
+            >
+            <ImageView
+                android:layout_marginTop="8dp"
+                android:id="@+id/icon1"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:src="@mipmap/seruling"
+
+                />
+            <TextView
+                android:id="@+id/nama_tempat1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Tempat   : Just musik"
+                android:layout_toEndOf="@id/icon1"
+                android:textColor="@color/md_black_1000"
+                android:textSize="12sp"
+                android:paddingBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:paddingLeft="8dp"
+                />
+            <TextView
+                android:id="@+id/alat1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Alat          : Gitar"
+                android:layout_toEndOf="@id/icon1"
+                android:layout_below="@+id/nama_tempat1"
+                android:textColor="@color/md_black_1000"
+                android:textSize="12sp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="8dp"
+                />
+            <TextView
+                android:id="@+id/harga1" android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Harga                  : Rp.15000/hari"
+                android:layout_toEndOf="@id/icon1"
+                android:layout_below="@+id/alat1"
+                android:textColor="@color/md_black_1000"
+                android:textSize="12sp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="8dp"
+                />
+            <TextView
+                android:id="@+id/alamat1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alamat                : Jl. Sapu No.6 Malang"
+                android:layout_toEndOf="@id/icon1"
+                android:layout_below="@+id/harga1"
+                android:textColor="@color/md_black_1000"
+                android:textSize="12sp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="8dp"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/katalog1"
+            >
+            <ImageView
+                android:layout_marginTop="8dp"
+                android:id="@+id/icon1"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:src="@mipmap/drum"
+
+                />
+            <TextView
+                android:id="@+id/nama_tempat1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Tempat   : Just musik"
+                android:layout_toEndOf="@id/icon1"
+                android:textColor="@color/md_black_1000"
+                android:textSize="12sp"
+                android:paddingBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:paddingLeft="8dp"
+                />
+            <TextView
+                android:id="@+id/alat1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Alat          : Gitar"
+                android:layout_toEndOf="@id/icon1"
+                android:layout_below="@+id/nama_tempat1"
+                android:textColor="@color/md_black_1000"
+                android:textSize="12sp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="8dp"
+                />
+            <TextView
+                android:id="@+id/harga1" android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Harga                  : Rp.15000/hari"
+                android:layout_toEndOf="@id/icon1"
+                android:layout_below="@+id/alat1"
+                android:textColor="@color/md_black_1000"
+                android:textSize="12sp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="8dp"
+                />
+            <TextView
+                android:id="@+id/alamat1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alamat                : Jl. Sapu No.6 Malang"
+                android:layout_toEndOf="@id/icon1"
+                android:layout_below="@+id/harga1"
+                android:textColor="@color/md_black_1000"
+                android:textSize="12sp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="8dp"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/katalog1"
+            >
+            <ImageView
+                android:layout_marginTop="8dp"
+                android:id="@+id/icon1"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:src="@mipmap/tamborin"
+
+                />
+            <TextView
+                android:id="@+id/nama_tempat1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Tempat   : Just musik"
+                android:layout_toEndOf="@id/icon1"
+                android:textColor="@color/md_black_1000"
+                android:textSize="12sp"
+                android:paddingBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:paddingLeft="8dp"
+                />
+            <TextView
+                android:id="@+id/alat1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Alat          : Gitar"
+                android:layout_toEndOf="@id/icon1"
+                android:layout_below="@+id/nama_tempat1"
+                android:textColor="@color/md_black_1000"
+                android:textSize="12sp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="8dp"
+                />
+            <TextView
+                android:id="@+id/harga1" android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Harga                  : Rp.15000/hari"
+                android:layout_toEndOf="@id/icon1"
+                android:layout_below="@+id/alat1"
+                android:textColor="@color/md_black_1000"
+                android:textSize="12sp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="8dp"
+                />
+            <TextView
+                android:id="@+id/alamat1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alamat                : Jl. Sapu No.6 Malang"
+                android:layout_toEndOf="@id/icon1"
+                android:layout_below="@+id/harga1"
+                android:textColor="@color/md_black_1000"
+                android:textSize="12sp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="8dp"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/katalog1"
+            >
+            <ImageView
+                android:layout_marginTop="8dp"
+                android:id="@+id/icon1"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:src="@mipmap/biola"
+
+                />
+            <TextView
+                android:id="@+id/nama_tempat1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Tempat   : Just musik"
+                android:layout_toEndOf="@id/icon1"
+                android:textColor="@color/md_black_1000"
+                android:textSize="12sp"
+                android:paddingBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:paddingLeft="8dp"
+                />
+            <TextView
+                android:id="@+id/alat1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Alat          : Gitar"
+                android:layout_toEndOf="@id/icon1"
+                android:layout_below="@+id/nama_tempat1"
+                android:textColor="@color/md_black_1000"
+                android:textSize="12sp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="8dp"
+                />
+            <TextView
+                android:id="@+id/harga1" android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Harga                  : Rp.15000/hari"
+                android:layout_toEndOf="@id/icon1"
+                android:layout_below="@+id/alat1"
+                android:textColor="@color/md_black_1000"
+                android:textSize="12sp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="8dp"
+                />
+            <TextView
+                android:id="@+id/alamat1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alamat                : Jl. Sapu No.6 Malang"
+                android:layout_toEndOf="@id/icon1"
+                android:layout_below="@+id/harga1"
+                android:textColor="@color/md_black_1000"
+                android:textSize="12sp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="8dp"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/katalog1"
+            >
+            <ImageView
+                android:layout_marginTop="8dp"
+                android:id="@+id/icon1"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:src="@mipmap/ic_launcher"
+
+                />
+            <TextView
+                android:id="@+id/nama_tempat1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Tempat   : Just musik"
+                android:layout_toEndOf="@id/icon1"
+                android:textColor="@color/md_black_1000"
+                android:textSize="12sp"
+                android:paddingBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:paddingLeft="8dp"
+                />
+            <TextView
+                android:id="@+id/alat1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Alat          : Gitar"
+                android:layout_toEndOf="@id/icon1"
+                android:layout_below="@+id/nama_tempat1"
+                android:textColor="@color/md_black_1000"
+                android:textSize="12sp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="8dp"
+                />
+            <TextView
+                android:id="@+id/harga1" android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Harga                  : Rp.15000/hari"
+                android:layout_toEndOf="@id/icon1"
+                android:layout_below="@+id/alat1"
+                android:textColor="@color/md_black_1000"
+                android:textSize="12sp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="8dp"
+                />
+            <TextView
+                android:id="@+id/alamat1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alamat                : Jl. Sapu No.6 Malang"
+                android:layout_toEndOf="@id/icon1"
+                android:layout_below="@+id/harga1"
+                android:textColor="@color/md_black_1000"
+                android:textSize="12sp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="8dp"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

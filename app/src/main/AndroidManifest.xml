@@ -4,8 +4,8 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:icon="@mipmap/icon_sewa_aja"
+        android:label="Sewa Aja"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
@@ -15,13 +15,29 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Main2Activity" />
-        <activity android:name=".Main3Activity" />
         <activity
             android:name=".SecondActivity"
             android:parentActivityName=".MainActivity" />
         <activity android:name=".Cari" />
-        <activity android:name=".Bayar"></activity>
+        <activity android:name=".Bayar" />
+        <activity android:name=".daftar" />
+        <activity android:name=".katalog" />
+        <activity
+            android:name=".nav_penyewa"
+            android:label="@string/title_activity_nav_penyewa"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".nav_pemilik"
+            android:label="@string/title_activity_nav_pemilik"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".daftarpenyewa" />
+        <activity android:name=".pengambilan" />
+        <activity android:name=".pembayaran" />
+        <activity android:name=".daftar_katalogpemilik" />
+        <activity android:name=".detailkatalog" />
+        <activity android:name=".detailkonfirmasipembayaran" />
+        <activity android:name=".detailkonfirmasipengambilan" />
+        <activity android:name=".detailalatmusik"></activity>
     </application>
 
 </manifest>

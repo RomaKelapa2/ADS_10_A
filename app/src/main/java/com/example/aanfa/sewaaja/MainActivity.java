@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Login Sukses", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(MainActivity.this, SecondActivity.class);
             startActivity(intent);
+
         }
 
         else if ((text1.matches("")||text2.matches("")))
@@ -55,6 +56,14 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+    public void Cari_alat(View view) {
+        Intent intent = new Intent(MainActivity.this, daftar.class);
+        startActivity(intent);
+    }
 
 
+    public void signup(View view) {
+        Intent intent = new Intent(MainActivity.this, daftar.class);
+        startActivity(intent);
+    }
 }
